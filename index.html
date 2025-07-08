@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Anniversary Sajani! 💕</title>
+    <title>Happy Anniversary My Love! 💕</title>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600;700&family=Poppins:wght@300;400;600&display=swap');
 
@@ -458,62 +458,23 @@
       </button>
     </div>
 
-    <div class="audio-controls hidden">
+    <!-- <div class="audio-controls hidden">
       <button id="play-pause">🎵</button>
       <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5" />
       <span style="color: white; font-size: 0.9rem; margin-left: 10px">🔊</span>
     </div>
 
-    <audio id="birthday-song" loop>
+    <audio id="birthday-song" loop class="hidden">
       <source
         src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
         type="audio/mp3"
       />
       Your browser does not support the audio element.
-    </audio>
+    </audio> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script>
       // Audio controls
-      const audio = document.getElementById('birthday-song');
-      const playPauseBtn = document.getElementById('play-pause');
-      const volumeControl = document.getElementById('volume');
-      let isPlaying = false;
-
-      audio.volume = volumeControl.value;
-
-      // Auto-play with user interaction
-      document.addEventListener(
-        'click',
-        function () {
-          if (!isPlaying) {
-            audio
-              .play()
-              .then(() => {
-                isPlaying = true;
-                playPauseBtn.textContent = '⏸️';
-              })
-              .catch((e) => console.log('Audio play failed:', e));
-          }
-        },
-        { once: true }
-      );
-
-      playPauseBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (isPlaying) {
-          audio.pause();
-          playPauseBtn.textContent = '🎵';
-        } else {
-          audio.play();
-          playPauseBtn.textContent = '⏸️';
-        }
-        isPlaying = !isPlaying;
-      });
-
-      volumeControl.addEventListener('input', () => {
-        audio.volume = volumeControl.value;
-      });
 
       // Next page function
       function goToNextPage() {
